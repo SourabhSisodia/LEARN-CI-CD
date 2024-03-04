@@ -11,7 +11,9 @@ app.use(express.json());
 
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
-
+app.get("/", (req, res) => {
+  res.status(200).send({ messgae: "helllo world" });
+});
 // mongoose.connect("mongodb://localhost:27017/courses", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
